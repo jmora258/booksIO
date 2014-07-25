@@ -1,7 +1,15 @@
 <h3>Books --many amazing books! </h3> 
 
+<ul> 
 <% @books.each do |book| %> 
 	
-	<i><%= book.subject %></i> by <%= book.author %><br> 
+	<li>
+		<i><%= book.subject %></i> by <%= book.author %>
+		<ul>
+			<li>Year: <%= book.year %></li> 
+			<li>Edition: <%= book.edition %></li>
+		</ul> 
+	</li> 
 
 <% end %> 
+</ul> 
